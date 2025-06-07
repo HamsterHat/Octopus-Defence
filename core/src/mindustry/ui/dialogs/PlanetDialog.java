@@ -33,7 +33,6 @@ import mindustry.graphics.g3d.*;
 import mindustry.input.*;
 import mindustry.io.*;
 import mindustry.maps.*;
-import mindustry.maps.planet.*;
 import mindustry.type.*;
 import mindustry.type.Planet.*;
 import mindustry.ui.*;
@@ -1150,7 +1149,7 @@ public class PlanetDialog extends BaseDialog implements PlanetInterfaceRenderer{
         }
     }
 
-    void selectSector(Sector sector){
+    public void selectSector(Sector sector){
         selected = sector;
         updateSelected();
     }
