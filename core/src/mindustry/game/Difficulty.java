@@ -9,6 +9,7 @@ public enum Difficulty{
     normal(1f, 1f, 1f),
     hard(1.25f, 1.5f, 0.8f),
     eradication(1.5f, 2f, 0.6f);
+    impossible(2f, 4f, 0.3f);
 
     public static final Difficulty[] all = values();
 
