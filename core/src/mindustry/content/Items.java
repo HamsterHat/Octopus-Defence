@@ -10,7 +10,7 @@ public class Items{
     phaseFabric, surgeAlloy, sporePod, sand, blastCompound, pyratite, metaglass,
     beryllium, tungsten, oxide, carbide, fissileMatter, dormantCyst;
 
-    public static final Seq<Item> serpuloItems = new Seq<>(), erekirItems = new Seq<>(), erekirOnlyItems = new Seq<>();
+    public static final Seq<Item> serpuloItems = new Seq<>(), erekirItems = new Seq<>(), erekirOnlyItems = new Seq<>(), punOnlyItems = new Seq<>();
 
     public static void load(){
         copper = new Item("copper", Color.valueOf("d99d73")){{
@@ -135,6 +135,22 @@ public class Items{
             hidden = true;
         }};
 
+        punium = new Item("punium", Color.valueOf("5bb92e")){{
+            hardness = 1;
+            cost = 0.1f;
+            alwaysUnlocked = true;
+        }};
+
+        pini = new Item("pini", Color.valueOf("55b3c3")){{
+            hardness = 1;
+            cost = 0.1f;
+        }};
+
+        steel = new Item("steel", Color.valueOf("cococo")){{
+            hardness = 1;
+            cost = 0.25f;
+        }};
+
         serpuloItems.addAll(
         scrap, copper, lead, graphite, coal, titanium, thorium, silicon, plastanium,
         phaseFabric, surgeAlloy, sporePod, sand, blastCompound, pyratite, metaglass
@@ -146,6 +162,10 @@ public class Items{
         );
 
         erekirOnlyItems.addAll(erekirItems).removeAll(serpuloItems);
+
+        punOnlyItems.addAll(
+        punium, pini, stal
+        );
 
     }
 }
